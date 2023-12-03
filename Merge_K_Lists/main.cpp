@@ -259,7 +259,7 @@ void demo3() {
 void show_all() {
     perf_n();
     prof.reset();
-
+//k
     perf_k();
     prof.reset();
 
