@@ -1,0 +1,3 @@
+C:/Users/Paul/Desktop/C++/Quick_Sort/cmake-build-debug/CMakeFiles/Quick_Sort.dir
+C:/Users/Paul/Desktop/C++/Quick_Sort/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Paul/Desktop/C++/Quick_Sort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
