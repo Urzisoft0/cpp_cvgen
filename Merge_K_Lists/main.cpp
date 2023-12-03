@@ -265,10 +265,6 @@ void show_all() {
 
 }
 
-void yeyeye() {
-    std::cout << "dsdsdsd";
-}
-
 int main() {
     demo2();
 
