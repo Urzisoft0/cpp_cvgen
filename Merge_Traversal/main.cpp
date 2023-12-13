@@ -10,8 +10,8 @@ int partition(int *a, int left, int right, Operation sel, Operation comp) {
     int j = left;
 
     for (int i = left; i <= right; i++) {
+        comp.count();
         if (a[i] < p) {
-            comp.count();
             std::swap(a[j], a[i]);
             sel.count(3);
             j++;
