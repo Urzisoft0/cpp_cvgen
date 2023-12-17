@@ -25,11 +25,11 @@ using Vec = std::vector<int>;
  *  Tree Traversal -> Recursive Call
  */
 void printParent(const Vec& vector, int parent, int indent) {
-    for (int i = 0; i < vector.size(); i++)
-        if (vector[i] == parent) {
-            std::cout << space(indent, ' ') << i + 1 << "\n";
-            printParent(vector, i + 1, indent + 3);
-        }
+        for (int i = 0; i < vector.size(); i++)
+            if (vector[i] == parent) {
+                std::cout << space(indent, ' ') << i + 1 << "\n";
+                printParent(vector, i + 1, indent + 3);
+            }
 }
 
 /*  First Transformation (from Parent-Vector to Multi-Way Tree)

@@ -409,6 +409,6 @@ void perf() {
 }
 
 int main() {
-    //test();
-    perf();
+    test();
+    //perf();
 }
