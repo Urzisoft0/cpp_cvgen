@@ -19,8 +19,8 @@ typedef struct{
 
 enum{
     COLOR_WHITE = 0,
-    COLOR_GRAY,
-    COLOR_BLACK
+    COLOR_GRAY = 1,
+    COLOR_BLACK = 2
 };
 
 typedef struct _Node{
@@ -28,8 +28,8 @@ typedef struct _Node{
     int adjSize;
     struct _Node **adj;
 
-    int color;
-    int dist;
+    int color = COLOR_WHITE;
+    int dist = 1;
     struct _Node *parent;
 }Node;
 
@@ -39,6 +39,7 @@ typedef struct{
 }Graph;
 
 int get_neighbors(const Grid *grid, Point p, Point neighb[]);
+int get_neighbors2(const Grid *grid, Point p, Point neighb[]);
 void grid_to_graph(const Grid *grid, Graph *graph);
 void free_graph(Graph *graph);
 void bfs(Graph *graph, Node *s, Operation *op=NULL);
