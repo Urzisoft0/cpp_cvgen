@@ -6,14 +6,14 @@ template <std::size_t T>
 class Graph {
 private:
     std::vector<std::list<int>> node;
-
     std::vector<bool> visited;
 public:
     Graph() {
         node.resize(T);
         visited.resize(T);
-        for (int i = 0; i < node.size(); i++)
-            visited[i] = false;
+        std::vector<bool>::iterator i;
+        for (i = visited.begin(); i != visited.end(); i++)
+            visited[*i] = false;
     }
 
     void printGraph() {
@@ -25,26 +25,21 @@ public:
         }
     }
 
-    void addEdge(int source, int target) {
-        node[source].push_back(target);
-    }
-
-    void addEdge(int source, const std::vector<int>& targets) {
-        for (auto &i: targets)
-            node[source].push_back(i);
+    template <typename... Args>
+    void addEdge(int source, Args... targets) {
+        (node[source].push_back(targets), ...);
     }
 
     void dfs(int start) {
         std::cout << start << " ";
         visited[start] = true;
 
-        std::list<int>::iterator i;
-        for (i = node[start].begin(); i != node[start].end(); i++)
-            if (!visited[*i])
-                dfs(*i);
+        for (auto &i: node[start])
+            if (!visited[i])
+                dfs(i);
     }
 
-    void Tarjan() {
+    void tarjan() {
         //  TODO: implement tarjan
     }
 
@@ -57,12 +52,12 @@ int main() {
     const int i = 8;
     Graph<i> node;
 
-    node.addEdge(0, {2, 3});
+    node.addEdge(0, 2, 3);
     node.addEdge(1, 5);
-    node.addEdge(2, {0, 4});
+    node.addEdge(2, 0, 4);
     node.addEdge(4, 6);
-    node.addEdge(5, {1, 6, 7});
-    node.addEdge(6, {4, 7});
+    node.addEdge(5, 1, 6, 7);
+    node.addEdge(6, 4, 7);
     node.addEdge(7, 5);
     node.printGraph();
     std::cout << "\n\n";
