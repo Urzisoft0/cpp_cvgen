@@ -1,3 +1,0 @@
-C:/Users/Paul/Desktop/C++/AVL_TREE/cmake-build-debug/CMakeFiles/AVL_TREE.dir
-C:/Users/Paul/Desktop/C++/AVL_TREE/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Paul/Desktop/C++/AVL_TREE/cmake-build-debug/CMakeFiles/rebuild_cache.dir
